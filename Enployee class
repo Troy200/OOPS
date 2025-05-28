@@ -1,0 +1,30 @@
+class employee():
+
+    def __init__(self,name,idnum,feild):
+        self.name= name
+        self.idnum=idnum
+        self.feild=feild
+
+    def display_info(self):
+        print("Name: "+self.name)
+        print("ID Number:{} ".format(self.idnum))
+        print("Feild: "+self.feild)
+
+
+
+e1= employee("Tom",101,"IT")
+e2= employee("Jack",102,"Customer-service")
+e3= employee("Olivia",103,"HR")
+e4= employee("Lilly",104,"Sales")
+
+
+
+
+print(e1.name)
+print(e1.idnum)
+print(e1.feild)
+
+
+e2.display_info()
+e3.display_info()
+e4.display_info()
