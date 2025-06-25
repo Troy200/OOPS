@@ -13,7 +13,7 @@ rocket_x=300
 rocket_y=200
 
 #print(pygame.font.get_fonts())
-font=pygame.font.SysFont("Arial",600)
+font=pygame.font.SysFont("Arial",70)
 
 run=True
 while run:
@@ -21,7 +21,11 @@ while run:
     if rocket_y>600:
         screen.blit(bg,(0,0))
         text= font.render("Game Over",True,"white")
-        screen.blit(text,(300,300))
+        screen.blit(text,(200,300))
+    else:
+        screen.blit(bg,(0,0))
+        screen.blit(rocket,(rocket_x,rocket_y))
+
     for event in pygame.event.get():
 
         if event.type== pygame.QUIT:
@@ -38,6 +42,5 @@ while run:
                 rocket_x=rocket_x-10
 
 
-    screen.blit(bg,(0,0))
-    screen.blit(rocket,(rocket_x,rocket_y))
+    
     pygame.display.update()
